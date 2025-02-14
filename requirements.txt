@@ -3,3 +3,4 @@ litellm
 opencv-python
 python-dotenv
 numpy
+uvicorn
