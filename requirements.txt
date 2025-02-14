@@ -1,0 +1,5 @@
+fastapi
+litellm
+opencv-python
+python-dotenv
+numpy
