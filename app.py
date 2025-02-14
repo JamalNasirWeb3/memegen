@@ -13,13 +13,14 @@ import numpy as np
 dotenv.load_dotenv()
 
 # Set up Gemini API key
-gemini_api_key = os.getenv("GEMINI_API_KEY") or "AIzaSyCWXGTEYUw62pn6I4EDfT3HprZTl82e2s"
+gemini_api_key = os.getenv("GEMINI_API_KEY") 
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Replace "*" with ["http://localhost:3000"] for security
+    allow_origins=["https://memes-alpha-two.vercel.app/"],  # Replace with your Vercel URL
+    #allow_origins=["*"],  # Replace "*" with ["http://localhost:3000"] for security
     allow_credentials=True,
     allow_methods=["*"],  # Allows all HTTP methods (GET, POST, etc.)
     allow_headers=["*"],  # Allows all headers
