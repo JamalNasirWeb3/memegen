@@ -14,6 +14,7 @@ dotenv.load_dotenv()
 
 # Set up Gemini API key
 gemini_api_key = os.getenv("GEMINI_API_KEY") 
+ports=os.getenv("PORT")
 
 app = FastAPI()
 
@@ -124,4 +125,4 @@ async def process_images(
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=10000)
+    uvicorn.run(app, host="localhost", port=ports)
